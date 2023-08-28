@@ -1,0 +1,17 @@
+<?php return array (
+  'admin.users-index' => 'App\\Http\\Livewire\\Admin\\UsersIndex',
+  'cap-index' => 'App\\Http\\Livewire\\CapIndex',
+  'course-status' => 'App\\Http\\Livewire\\CourseStatus',
+  'courses-index' => 'App\\Http\\Livewire\\CoursesIndex',
+  'courses-reviews' => 'App\\Http\\Livewire\\CoursesReviews',
+  'instructor.courses-audiences' => 'App\\Http\\Livewire\\Instructor\\CoursesAudiences',
+  'instructor.courses-curriculum' => 'App\\Http\\Livewire\\Instructor\\CoursesCurriculum',
+  'instructor.courses-goals' => 'App\\Http\\Livewire\\Instructor\\CoursesGoals',
+  'instructor.courses-index' => 'App\\Http\\Livewire\\Instructor\\CoursesIndex',
+  'instructor.courses-lesson' => 'App\\Http\\Livewire\\Instructor\\CoursesLesson',
+  'instructor.courses-requirements' => 'App\\Http\\Livewire\\Instructor\\CoursesRequirements',
+  'instructor.courses-students' => 'App\\Http\\Livewire\\Instructor\\CoursesStudents',
+  'instructor.lesson-description' => 'App\\Http\\Livewire\\Instructor\\LessonDescription',
+  'instructor.lesson-resources' => 'App\\Http\\Livewire\\Instructor\\LessonResources',
+  'search' => 'App\\Http\\Livewire\\Search',
+);
