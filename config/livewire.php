@@ -54,10 +54,8 @@ return [
     |
     */
 
+    'asset_url' => "capdelnorth-production.up.railway.app",
 
-    'asset_url' => 'https://capdelnorth-production.up.railway.app/',
-
-   
     /*
     |--------------------------------------------------------------------------
     | Livewire App URL
@@ -70,7 +68,7 @@ return [
     |
     */
 
-    'app_url' => 'https://capdelnorth-production.up.railway.app/',
+    'app_url' => "capdelnorth-production.up.railway.app",
 
     /*
     |--------------------------------------------------------------------------
