@@ -55,7 +55,7 @@ return [
     */
 
 
-    'asset_url' => env('ASSET_URL', 'https://capdelnorth-production.up.railway.app'),
+    'asset_url' => $_ENV('ASSET_URL', 'https://capdelnorth-production.up.railway.app'),
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ return [
     | Examples: "https://my-app.com", "myurl.com/app".
     |
     */
-    'app_url' => env('/'),
+    'app_url' => $_ENV('/'),
 
 
 
