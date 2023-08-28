@@ -53,8 +53,9 @@ return [
     | Examples: "/assets", "myurl.com/app".
     |
     */
-    'asset_url' => env('APP_URL', 'https://capdelnorth-production.up.railway.app/'),
 
+
+    'asset_url' => env('ASSET_URL', 'https://capdelnorth-production.up.railway.app/'),
 
     /*
     |--------------------------------------------------------------------------
@@ -67,8 +68,9 @@ return [
     | Examples: "https://my-app.com", "myurl.com/app".
     |
     */
+    'app_url' => env('APP_URL', 'https://capdelnorth-production.up.railway.app/'),
 
-    'app_url' => 'https://capdelnorth-production.up.railway.app/',
+
 
     /*
     |--------------------------------------------------------------------------
