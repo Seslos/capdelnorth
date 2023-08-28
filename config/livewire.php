@@ -68,7 +68,7 @@ return [
     | Examples: "https://my-app.com", "myurl.com/app".
     |
     */
-    'app_url' => env('/'),
+    'app_url' => env(''),
 
 
 
