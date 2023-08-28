@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'class_namespace' => 'App\\Http\\Livewire',
+    'class_namespace' => 'App\\Http\Livewire',
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ return [
     | Examples: "https://my-app.com", "myurl.com/app".
     |
     */
-    'app_url' => env('/'),
+    'app_url' => env(' '),
 
 
 
