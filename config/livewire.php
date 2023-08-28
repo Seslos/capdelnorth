@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'asset_url' => null,
+    'asset_url' => 'https://capdelnorth-production.up.railway.app/',
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ return [
     |
     */
 
-    'app_url' =>null ,
+    'app_url' =>'https://capdelnorth-production.up.railway.app/' ,
 
     /*
     |--------------------------------------------------------------------------
