@@ -43,7 +43,7 @@ class CourseController extends Controller{
         $course = Course::create($request->all());
     
         if ($request->file('file')) {
-            $url= Storage::put('../storage/courses',$request->file('file'));
+            $url= public_path::put('/img/courses',$request->file('file'));
             $course->image()->create([
                 'url'=>$url
             ]);
