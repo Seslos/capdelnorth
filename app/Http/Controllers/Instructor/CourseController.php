@@ -93,9 +93,9 @@ class CourseController extends Controller{
 
         $course->update($request->all());
         if ($request->file('file')) {
-            $url=Storage::put('../storage/courses',$request->file('file'));
+            $url=public_path::put('/img/courses',$request->file('file'));
                 if ($course->image) {
-                    Storage::delete($course->image->url);
+                    public_path::delete($course->image->url);
                     $course->image->update([
                         'url'=>$url
                     ]);
