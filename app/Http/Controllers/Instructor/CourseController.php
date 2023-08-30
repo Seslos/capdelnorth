@@ -43,7 +43,11 @@ class CourseController extends Controller{
         $course = Course::create($request->all());
     
         if ($request->file('file')) {
+<<<<<<< HEAD
             $url= base64_encode($request->file('file'));
+=======
+                   $url= base64_encode($request->file('file'));
+>>>>>>> 3e1bcf63e2f29af91bd21cf63c66e7ad122df31b
             $course->image()->create([
                 'url'=>$url
             ]);
