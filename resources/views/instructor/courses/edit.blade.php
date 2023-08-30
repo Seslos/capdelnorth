@@ -14,6 +14,6 @@
     {!! Form::close() !!}
 <x-slot name="js">
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-<script src="{{asset('js/instructor/courses/form.js')}}"> </script>
+    <script src="{{asset('js/instructor/courses/form.js')}}"> </script>
 </x-slot>
 </x-instructor-layout>

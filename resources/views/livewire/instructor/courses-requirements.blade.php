@@ -35,11 +35,7 @@
                 </div>
     
         </article>
-        
     @endforeach
-    
-    
-    
         <article class="card">
             <div class="card-body bg-gray-100" >
                 <form wire:submit.prevent="store">

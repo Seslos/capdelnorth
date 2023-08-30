@@ -12,14 +12,10 @@
                 @if ($goal->id == $item->id)
                     <form wire:submit.prevent="update">
                         <input wire:model="goal.name" class="form-input w-full ">
-                    
-                    
                     @error('goal.name')
                     <span class="text-xs text-red-500"></span>
                         
                     @enderror
-                    
-                    
                     </form>
                 @else 
                 <header class="flex justify-between">
@@ -30,16 +26,9 @@
                 </div>
                 </header>
                 @endif
-        
-
             </div>
-
     </article>
-    
 @endforeach
-
-
-
     <article class="card">
         <div class="card-body bg-gray-100" >
             <form wire:submit.prevent="store">

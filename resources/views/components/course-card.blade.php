@@ -1,7 +1,7 @@
 
 
 @props(['course'])
-<article class="cardd flex flex-col">
+<article class="cardd flex flex-col my-2">
   
    <img class="h-36 w-full object-cover" src="{{$course->image ?Storage::url($course->image->url): 'https://imagen_prueba.com' }} " alt="">
 
