@@ -42,7 +42,7 @@
                                     </div>
                                 
                             </div>
-                                <h1 class="text-2xl font-bold  mt-8 mb-2">Imagen del curso</h1>
+                                <h1 class="text-2xl font-bold  mt-8 mb-2">Imagxxxen del curso</h1>
                                     <div class="grid grid-cols-2 gap-4">
                                         <figure>
                                             @isset($course->image)
@@ -54,7 +54,7 @@
                                             @endisset
                                         </figure>
                                             <div>
-                                               <p class="mb-2"> sxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                                               <p class="mb-2"> funca</p>
                                                
                                                {!! Form::file('file', ['class'=>'form-input w-full','id'=>'file','accept'=>'image/*']) !!}
                                                @error('file')
