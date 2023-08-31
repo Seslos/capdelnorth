@@ -83,7 +83,6 @@
               
             </nav>
           </div>
- 
           <div>
             <p class="font-medium">
                 Enlaces Útiles
@@ -91,7 +90,6 @@
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
               <a class="hover:opacity-75" href> Contacto </a>
               <a class="hover:opacity-75" href> preguntas frecuentes </a>
-
             </nav>
           </div>
           <div>

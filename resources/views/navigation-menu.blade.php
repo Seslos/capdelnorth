@@ -23,8 +23,8 @@
 
 [
         'name'=>'Contacto',
-        'route'=>route('courses.index'),
-        'active'=>request()->routeIs('courses.*')
+        'route'=>route('Contacto.index'),
+        'active'=>request()->routeIs('Contacto.index')
 ],
 
     ];
