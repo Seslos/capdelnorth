@@ -9,10 +9,8 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <!-- Scripts -->
-
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="stylesheet"  href="{{asset('vendor/fontawesome-free/css/all.min.css')}}">
-
         <!-- Styles -->
         @livewireStyles
     </head>
@@ -43,11 +41,8 @@
                             </li>
                              @endif
                         </ul>
-
-
                             @switch($course->status)
-                                @case(1)
-                                    
+                                @case(1)        
                         <form action="{{route('instructor.courses.status',$course)}}" method="post">
                             @csrf
                             <button type="submit" class="btn btn-danger"> Solicitar revición</button>
