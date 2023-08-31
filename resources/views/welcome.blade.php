@@ -23,8 +23,6 @@
         <header class="mt-2">
             <h1 class="text-center text-xl text-gray-700">Cursos SENCE</h1>
         </header>
-
-
     </article>
     <article>
         <figure>
@@ -47,15 +45,13 @@
             </header>
         <!-- <p class="text-sm text-gray-500">Necesitas ayuda para aprender algún tema. Escríbenos</p>
         -->
-    </article>   
-
-
-</div>
-</div>
+        </article>   
+    </div>
+    </div>
 </section>
 <section class="mt-24"></section>
 <section class="mt-24 bg-gray-700 py-12">
-    <h1 class="text-center text-whiter text-3xl">¿No sabes qué curso llevar?</h1>
+    <h1 class="text-center text-white text-3xl">¿No sabes qué curso llevar?</h1>
     <p class="text-center text-white">Descubre los mejores cursos de programación
     </p>
     <div class="flex justify-center mt-4">
