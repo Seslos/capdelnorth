@@ -68,21 +68,15 @@
         </section>
         <h1 class="text-xl font-semibold sm:text-2xl mb-4 text-gray-800">Descripción</h1>
 
-        <section class="bg-white shadow">
+        <section class="bg-white shadow my-4">
             <div class="card-body">
             <div class="text-gray-700 text-base">
                 {!!$course->description!!}
             </div>
             </div>
         </section>
-     
-           
-                    @livewire('courses-reviews', ['course' => $course])
-       
-           
-     
+     @livewire('courses-reviews', ['course' => $course])
     </div>
-    
     <div class="order-1 lg:order-2">
             <section class="bg-white shadow mb-4">
                 <div class="card-body">

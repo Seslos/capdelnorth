@@ -6,7 +6,7 @@
                 <div class="card-body bg-gray-100">
                     @if ($requirement->id == $item->id)
                         <form wire:submit.prevent="update">
-                            <input wire:model="requirement.name" class="form-input w-full ">
+                            <input wire:model="requirement.name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 block  ">
                         @error('requirement.name')
                         <span class="text-xs text-red-500"></span>
                         @enderror
@@ -26,7 +26,7 @@
         <article class="card">
             <div class="card-body bg-gray-100" >
                 <form wire:submit.prevent="store">
-                    <input wire:model="name" class="form-input w-full" placeholder="Agregar Nombre  de un Requerimiento">
+                    <input wire:model="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 block " placeholder="Agregar Nombre  de un Requerimiento">
                    @error('name')
                    <span class="text-xs text-red-500">{{$message}}</span>
                    @enderror
