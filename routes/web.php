@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\CapController;
 use App\Http\Livewire\CourseStatus;
+use App\Http\Controllers\ContactoIndex;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,7 @@ route::get('cursos/{course}',[CourseController::class,'show'])->name('courses.sh
 
 
 route::get('cap',[CapController::class,'index'])->name('cap.index');
+route::get('Contacto',[ContactoIndex::class,'index'])->name('cap.conacto');
 
 
 route::post('courses/{course}/enrolled',[CourseController::class,'enrolled'])->middleware('auth')->name('courses.enrolled');

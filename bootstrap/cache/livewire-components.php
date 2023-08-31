@@ -1,6 +1,7 @@
 <?php return array (
   'admin.users-index' => 'App\\Http\\Livewire\\Admin\\UsersIndex',
   'cap-index' => 'App\\Http\\Livewire\\CapIndex',
+  'contacto-index' => 'App\\Http\\Livewire\\ContactoIndex',
   'course-status' => 'App\\Http\\Livewire\\CourseStatus',
   'courses-index' => 'App\\Http\\Livewire\\CoursesIndex',
   'courses-reviews' => 'App\\Http\\Livewire\\CoursesReviews',

@@ -23,8 +23,8 @@
 
 [
         'name'=>'Contacto',
-        'route'=>route('courses.index'),
-        'active'=>request()->routeIs('courses.*')
+        'route'=>route('cap.conacto'),
+        'active'=>request()->routeIs('cap.conacto')
 ],
 
     ];
@@ -294,10 +294,10 @@
         @else
         <div class="py-1 border-t border-gray-200">
             <x-responsive-nav-link href="{{route('login') }}" :active="request()->routeIs('login')">
-              Login
+                Acceso
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{route('register') }}" :active="request()->routeIs('register')">
-                Register
+                Registro
             </x-responsive-nav-link>
         </div>
         @endauth
