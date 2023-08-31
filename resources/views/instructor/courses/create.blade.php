@@ -1,28 +1,28 @@
 <x-app-layout>
 
-<div class="container py-8 ">
-        <div class="card">
-            <div class="card-body">
-                <h1 class="text-2xl font-bold">CREAR NUEVO CURSO</h1>
-                <hr class="mt-2 mb-6">
-                    {!! Form::open(['route'=>'instructor.courses.store','files'=>true,'autocomplete'=>'off']) !!}
-                    
-                    {!! Form::hidden('user_id',auth()->user()->id) !!}
-
-                    @include('instructor.courses.partials.form')
-
-                    <div class="flex justify-end">
-                        {!! Form::submit('Crear nuevo curso', ['class'=> 'btn btn-primary cursor-pointer']) !!}
-                    </div>
-                    {!!form::close() !!}
+    <div class="container py-8 ">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="text-2xl font-bold">CREAR NUEVO CURSO</h1>
+                    <hr class="mt-2 mb-6">
+                        {!! Form::open(['route'=>'instructor.courses.store','files'=>true,'autocomplete'=>'off']) !!}
+                        
+                        {!! Form::hidden('user_id',auth()->user()->id) !!}
+    
+                        @include('instructor.courses.partials.form')
+    
+                        <div class="flex justify-end">
+                            {!! Form::submit('Crear nuevo curso', ['class'=> 'bg-indigo-600 shadow-xl hover:bg-blue-500	 text-white font-bold rounded-full p-4 w-48 cursor-pointer']) !!}
+                        </div>
+                        {!!form::close() !!}
+                </div>
             </div>
-        </div>
-</div>
-
-
-<x-slot name="js">
-    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-    <script src="{{asset('js/instructor/courses/form.js')}}"> </script>
-</x-slot>
-
-</x-app-layout>
+    </div>
+    
+    
+    <x-slot name="js">
+        <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+        <script src="{{asset('js/instructor/courses/form.js')}}"> </script>
+    </x-slot>
+    
+    </x-app-layout>

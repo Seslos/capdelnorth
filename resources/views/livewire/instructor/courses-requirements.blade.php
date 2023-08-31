@@ -1,25 +1,15 @@
 <section>
-
     <h1 class="text-2xl font-bold"> REQUERIMIENTOS DEL CURSO</h1>
-    
     <hr class="mt-2 mb-6">
-    
     @foreach ($course->requirements as $item)
         <article class="card mb-4">
                 <div class="card-body bg-gray-100">
-    
-    
                     @if ($requirement->id == $item->id)
                         <form wire:submit.prevent="update">
-                            <input wire:model="requirement.name" class="form-input w-full ">
-                        
-                        
+                            <input wire:model="requirement.name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 block  ">
                         @error('requirement.name')
                         <span class="text-xs text-red-500"></span>
-                            
                         @enderror
-                        
-                        
                         </form>
                     @else 
                     <header class="flex justify-between">
@@ -30,29 +20,21 @@
                     </div>
                     </header>
                     @endif
-            
-    
                 </div>
-    
         </article>
     @endforeach
         <article class="card">
             <div class="card-body bg-gray-100" >
                 <form wire:submit.prevent="store">
-                    <input wire:model="name" class="form-input w-full" placeholder="Agregar Nombre  de un Requerimiento">
-                   
+                    <input wire:model="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 block " placeholder="Agregar Nombre  de un Requerimiento">
                    @error('name')
                    <span class="text-xs text-red-500">{{$message}}</span>
-                       
                    @enderror
-                   
-                   
                     <div class="flex justify-end mt-2">
                         <button type="submit" class="btn btn-primary">Agregar Requerimiento</button>
                     </div>
                 </form>
             </div>
         </article>
-    
-    </section>
+</section>
     

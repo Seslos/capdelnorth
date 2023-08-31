@@ -3,19 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="{{asset("img/home/logo.png")}}">
+        <link rel="shortcut icon" href="{{asset('img/home/logo.png')}}">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>{{ config('app.name', 'Laravel') }}</title>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <!-- Scripts -->
-
-
-
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="stylesheet"  href="{{asset('vendor/fontawesome-free/css/all.min.css')}}">
-
         <!-- Styles -->
         @livewireStyles
     </head>
@@ -30,7 +26,6 @@
         </div>
         @stack('modals')
         @livewireScripts
-
         @isset($js)
         {{$js}}
         @endisset
@@ -88,7 +83,6 @@
               
             </nav>
           </div>
- 
           <div>
             <p class="font-medium">
                 Enlaces Útiles
@@ -96,7 +90,6 @@
             <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
               <a class="hover:opacity-75" href> Contacto </a>
               <a class="hover:opacity-75" href> preguntas frecuentes </a>
-
             </nav>
           </div>
           <div>

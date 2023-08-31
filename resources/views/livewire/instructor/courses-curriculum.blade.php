@@ -1,18 +1,12 @@
 <div>
-
-
     <h1 class="text-2xl font-bold">LECCIONES DEL CURSO</h1>
     <hr class="mt-2 mb-6">
-
     @foreach ($course->sections as $item)
     <article class="card mb-6" x-data="{open: false}"> 
-
                 <div class="card-body bg-gray-100">
-
-
                     @if ($section->id==$item->id)
                         <form wire:submit.prevent="update">
-                            <input wire:model="section.name"class="form-control w-full rounded border-0" placeholder="Ingrese el Nombre del sección">
+                            <input wire:model="section.name"class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="Ingrese el Nombre del sección">
                         @error('section.name')
                         <span class="text-xs text-red-500">{{$message}}</span>
                             
@@ -26,7 +20,6 @@
                                 <i class="fas fa-eraser cursor-pointer text-red-500" wire:click="destroy({{$item}})"></i>
                             </div>
                     </header>
-
                     <div x-show="open">
                         @livewire('instructor.courses-lesson', ['section' => $item], key($item->id))
                     </div>
@@ -34,10 +27,7 @@
                     @endif
                 </div>
         </article>
-        
     @endforeach
-
-
     <div x-data="{open: false}">
         <a x-show="!open" x-on:click="open = true" class="flex items-center cursor-pointer">
             <i class="far fa-plus-square text-2xl text-red-500 mr-2"></i>
@@ -48,7 +38,7 @@
                 <div class="card-body bg-gray-100">
                     <h1 class="text-xl font-bold mb-4 text-black">Agregar nueva sección</h1>
                         <div class="mb-4">
-                            <input wire:model="name" class="form-input w-full" placeholder="Escribir el nombre de la sección">
+                            <input wire:model="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="Escribir el nombre de la sección">
                             @error('name')
                             <span class="text-xs text-red-500">{{$message}}</span>
                             @enderror

@@ -33,7 +33,6 @@ route::get('cursos/{course}',[CourseController::class,'show'])->name('courses.sh
 route::get('cap',[CapController::class,'index'])->name('cap.index');
 route::get('Contacto',[ContactoIndex::class,'index'])->name('cap.conacto');
 
-
 route::post('courses/{course}/enrolled',[CourseController::class,'enrolled'])->middleware('auth')->name('courses.enrolled');
 Route::get('course-status/{course}',CourseStatus::class)->middleware('auth')->name('courses.status');
      

@@ -6,7 +6,7 @@
                     <form wire:submit.prevent="update">
                         <div class="flex items-center">
                             <label class="w-32">Nombre:</label>
-                            <input wire:model="lesson.name" class="form-input w-full">
+                            <input wire:model="lesson.name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
                         </div>
                         @error('lesson.name')
                             <span class="text-xs text-red-500">{{$message}}</span>
@@ -22,7 +22,7 @@
                             </div>
                         <div class="flex items-center mt-4">
                             <label class="w-32">URL:</label>
-                            <input wire:model="lesson.url" class="form-input w-full">
+                            <input wire:model="lesson.url" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
                         </div>
                         @error('lesson.url')
                             <span class="text-xs text-red-500">{{$message}}</span>
@@ -46,37 +46,30 @@
                             <button class="btn btn-danger text-sm" wire:click="destroy({{$item}})"> Eliminar </button>
     
                         </div>
-                      
                         <div class="mb-4">
                             @livewire('instructor.lesson-description', ['lesson' => $item], key('lesson-description'.$item->id))
 
                         </div>
-                        
                         <div>
                             @livewire('instructor.lesson-resources', ['lesson' => $item], key('lesson-resources'.$item->id))
-
                         </div>
-
                     </div>
                 @endif
             </div>
         </article>
-
     @endforeach
-    
     <div x-data="{open: false}" class="mt-4">
         <a x-show="!open" x-on:click="open = true" class="flex items-center cursor-pointer">
             <i class="far fa-plus-square text-2xl text-red-500 mr-2"></i>
             Agregar nueva Lección
         </a>
-
         <article class="card" x-show="open">
                 <div class="card-body bg-gray-100">
                     <h1 class="text-xl font-bold mb-4 text-black">Agregar nueva Lección</h1>
                         <div class="mb-4">
                             <div class="flex items-center">
                                 <label class="w-32">Nombre:</label>
-                                <input wire:model="name" class="form-input w-full">
+                                <input wire:model="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
                             </div>
                             @error('name')
                                 <span class="text-xs text-red-500">{{$message}}</span>
@@ -93,7 +86,7 @@
                                 </div>
                             <div class="flex items-center mt-4">
                                 <label class="w-32">URL:</label>
-                                <input wire:model="url" class="form-input w-full">
+                                <input wire:model="url" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
                             </div>
                             @error('url')
                                 <span class="text-xs text-red-500">{{$message}}</span>
