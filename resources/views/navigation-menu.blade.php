@@ -17,8 +17,13 @@
 ],
 [
         'name'=>'Galería',
-        'route'=>route('courses.index'),
-        'active'=>request()->routeIs('courses.*')
+        'route'=>route('cap.galeria'),
+        'active'=>request()->routeIs('cap.galeria')
+],
+[
+        'name'=>'Clientes',
+        'route'=>route('cap.cliente'),
+        'active'=>request()->routeIs('cap.cliente')
 ],
 
 [
@@ -294,10 +299,10 @@
         @else
         <div class="py-1 border-t border-gray-200">
             <x-responsive-nav-link href="{{route('login') }}" :active="request()->routeIs('login')">
-                Acceso
+              Login
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{route('register') }}" :active="request()->routeIs('register')">
-                Registro
+                Register
             </x-responsive-nav-link>
         </div>
         @endauth
