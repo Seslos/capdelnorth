@@ -1,3 +1,4 @@
+
 <div>
     <section class="bg-cover" style="background-image: url({{asset('img/home/people-2557399_1920.jpg')}})">
     

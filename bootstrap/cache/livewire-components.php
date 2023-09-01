@@ -1,10 +1,12 @@
 <?php return array (
   'admin.users-index' => 'App\\Http\\Livewire\\Admin\\UsersIndex',
   'cap-index' => 'App\\Http\\Livewire\\CapIndex',
+  'cliente' => 'App\\Http\\Livewire\\Cliente',
   'contacto-index' => 'App\\Http\\Livewire\\ContactoIndex',
   'course-status' => 'App\\Http\\Livewire\\CourseStatus',
   'courses-index' => 'App\\Http\\Livewire\\CoursesIndex',
   'courses-reviews' => 'App\\Http\\Livewire\\CoursesReviews',
+  'galeria' => 'App\\Http\\Livewire\\Galeria',
   'instructor.courses-audiences' => 'App\\Http\\Livewire\\Instructor\\CoursesAudiences',
   'instructor.courses-curriculum' => 'App\\Http\\Livewire\\Instructor\\CoursesCurriculum',
   'instructor.courses-goals' => 'App\\Http\\Livewire\\Instructor\\CoursesGoals',
