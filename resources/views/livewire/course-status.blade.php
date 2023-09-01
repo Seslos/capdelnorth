@@ -13,6 +13,7 @@
                             {{$current->description->name}}
                         </div>
                     @endif
+
                 <div class="flex justify-between mt-4">
                     <div class="flex items-center  cursor-pointer" wire:click="completed">
                             @if ($current->completed)
@@ -24,22 +25,28 @@
                     </div>
                     @if ($current->resource)
                     <div class="flex items-center text-gray-600" wire:click="download">
-                        <i  class="fas fa-download text-2xl text-lg"></i>
+                        <i  class="fas fa-download text-2xl "></i>
                         <p class="text-sm ml-2 cursor-pointer ">Descargar Recurso</p>
+    
                     </div>
                     @endif
+           
                 </div>
+            
                 <div class="card mt-2">
                     <div class="card-body flex text-gray-500 font-bold">
                         @if ($this->previous)
                         <a wire:click="changeLesson({{$this->previous}})" class="cursor-pointer"> Tema Anterior</a>
                         @endif
+
                         @if($this->next)
                         <a wire:click="changeLesson({{$this->next}})" class="ml-auto cursor-pointer"> Siguiente Tema</a>
                         @endif
                     </div>
                 </div>
+            
             </div>
+
             <div class="card">
                 <div class="card-body">
                     <h1 class="text-2xl leading-8 text-center mb-4">{{$course->title}} </h1>  
@@ -73,6 +80,7 @@
                                                 <span class="inline-block w-4 h-4 bg-yellow-300 rounded-full mr-2 mt-1"></span>
                                             @endif
                                         @else
+
                                             @if ($current->id == $lesson->id)
                                                 <span class="inline-block w-4 h-4 border-2 border-gray-500 rounded-full mr-2 mt-1"></span>
                                             @else

@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Curso Colegios')
+@section('title', 'Administrador Cap')
 
 @section('content_header')
-    <h1>Curso Colegios</h1>
+    <h1>Administrador Cap </h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+<p>Bienvenido al panel de administración.</p>
 @stop
 
 @section('css')

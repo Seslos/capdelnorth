@@ -1,5 +1,5 @@
 @extends('adminlte::page')
-@section('title', 'Editar Nivel')
+@section('title', 'Actualizar Precios')
 @section('content_header')
     <h1>Actualizar Precios</h1>
 @stop

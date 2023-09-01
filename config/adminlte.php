@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>CapDENHOT',
+    'logo' => '<b>Admin</b>CapDeNorth',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -306,11 +306,7 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
+
         [
             'text'        => 'Dashboard',
             'route'       => 'admin.home',
@@ -319,16 +315,17 @@ return [
 
      
         ],
+
+        ['header' => 'OPCIONES USUARIOS'],
+
         [
             'text'        => 'Lista de Roles',
             'route'         => 'admin.roles.index',
             'icon'        => 'fas fa-fw fa-users-cog',
             'can'              => 'Lista role',
             'active'        =>['admin/roles*']
-           
-
-     
         ],
+
         [
             'text'        => 'Usuarios',
             'route'         => 'admin.users.index',
@@ -338,29 +335,52 @@ return [
 
      
         ],
+
         ['header' => 'OPCIONES DE CURSOS'],
-        [
-            'text' => 'Categorias',
-            'route'  => 'admin.categories.index',
-            'icon' => 'fas fa-fw fa-cogs',
-        ],
-        [
-            'text' => 'Niveles',
-            'route'  => 'admin.levels.index',
-            'icon' => 'fas fa-fw fa-chart-line',
-        ],
-        [
-            'text' => 'Precios',
-            'route'  => 'admin.prices.index',
-            'icon' => 'fas fa-fw fa-cc-visa',
-        ],
+
         [
             'text' => 'Pendientes de Aprobación',
             'route'  => 'admin.courses.index',
             'icon' => 'fas fa-fw fa-user',
         ],
 
+        [
+            'text' => 'Categorias',
+            'route'  => 'admin.categories.index',
+            'icon' => 'fas fa-fw fa-cogs',
+        ],
+
+        [
+            'text' => 'Niveles',
+            'route'  => 'admin.levels.index',
+            'icon' => 'fas fa-fw fa-chart-line',
+        ],
+
+        [
+            'text' => 'Precios',
+            'route'  => 'admin.prices.index',
+            'icon' => 'fas fa-fw fa-cc-visa',
+        ],
  
+        ['header' => 'OPCIONES EXTRAS'],
+
+        [
+            'text' => 'Galeria',
+            'route'  => 'admin.galeria.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+
+        [
+            'text' => 'Contacto',
+            'route'  => 'admin.Contacto.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        
+        [
+            'text' => 'Clientes',
+            'route'  => 'admin.clientes.index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
     ],
 
     /*

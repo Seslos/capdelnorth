@@ -43,13 +43,11 @@ class CourseController extends Controller{
         $course = Course::create($request->all());
     
         if ($request->file('file')) {
-            $url=base64_encode(file_get_contents($request->file('file')->path()));
-
+            $url= Storage::put('/public/storage/courses',$request->file('file'));
             $course->image()->create([
                 'url'=>$url
             ]);
-
-            
+            # code...
         }    
         return redirect()->route('instructor.courses.edit',$course); 
 
@@ -95,11 +93,17 @@ class CourseController extends Controller{
 
         $course->update($request->all());
         if ($request->file('file')) {
-            $url=base64_encode(file_get_contents($request->file('file')->path()));
-            
+            $url=Storage::put('/public/storage/courses',$request->file('file'));
+                if ($course->image) {
+                    Storage::delete($course->image->url);
                     $course->image->update([
                         'url'=>$url
-                    ]);        
+                    ]);
+                }else{
+                $course->image()->create([
+                    'url'=>$url
+                ]);     
+                }
         }
         return redirect()->route('instructor.courses.edit',$course);
     }

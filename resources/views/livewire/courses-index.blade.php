@@ -17,11 +17,14 @@
                 @foreach ($categories as $category)
                 <a  class="cursor-pointer transition-colors duration-200 block px-4 py-2 text-normal text-gray-900 rounded hover:bg-blue-500 hover:text-white" wire:click="$set('category_id',{{$category->id}})"x-on:click="open = false">
                     {{$category->name}}</a>
+         
+            
                 @endforeach
             </div>
             <!-- // Dropdown Body -->
         </div>
             <!-- // Dropdown -->
+        
                 <!-- Dropdown Niveles -->
     <div class="relative " x-data="{open: false}">
             <button class="px-4 text-gray block h-12  rounded-lg overflow-hidden focus:outline-none bg-white shadow"x-on:click="open=true">
@@ -34,6 +37,7 @@
          @foreach ($levels as $level)
          <a class=" cursor-pointer transition-colors duration-200 block px-4 py-2 text-normal
           text-gray-900 rounded hover:bg-blue-500 hover:text-white"wire:click="$set('level_id',{{$level->id}})"x-on:click="open=false">{{$level->name}}</a>
+             
          @endforeach
         </div>
         <!-- // Dropdown Body -->
@@ -41,6 +45,7 @@
         <!-- // Dropdown -->
     </div>
 </div>
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8 gap-x-6 gap-y-8">
         @foreach ($courses as $course)
 <x-course-card :course="$course"/>

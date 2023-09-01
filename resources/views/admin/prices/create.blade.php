@@ -1,5 +1,5 @@
 @extends('adminlte::page')
-@section('title', 'Curso Colegios')
+@section('title', 'Agregar nuevo precio')
 @section('content_header')
     <h1>Agregar nuevo precio</h1>
 @stop

@@ -1,20 +1,14 @@
 @extends('adminlte::page')
-
-@section('title', 'Curso Colegios')
-
+@section('title', 'Lista de Niveles')
 @section('content_header')
-
 <a href="{{route('admin.levels.create')}}" class="btn btn-secondary btn-sm float-right">Crear Nivel</a>
     <h1>Lista de Niveles</h1>
 @stop
-
 @section('content')
 @if (session('info'))
 <div class="alert alert-success">
     {{session('info')}}
-
 </div>
-    
 @endif
     <div class="card">
         <div class="card-body">
@@ -51,7 +45,9 @@
                 </tbody>
             </table>
         </div>
-    </div>@stop
+    </div>
+    
+    @stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">

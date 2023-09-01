@@ -1,9 +1,12 @@
 <section class="mt-4 my-4 ">
     <h1 class="font-bold text-3xl text-gray-800 mb-2">Valoración</h1>
+
 @can('enrolled', $course)
     <article class="my-4">
+        
         @can('valued', $course)
         <textarea wire:model="comment" class="form-input w-full" rows="3" placeholder="Ingrese una reseña del curso"></textarea>
+
         <div class="flex items-center">
             <button class="btn btn-primary mr-2" wire:click="store">Guardar</button>
             <ul class="flex">
@@ -39,15 +42,18 @@
                 <article class="flex mb-4 text-gray-800">
                     <figure class="mr-4">
                         <img class="h-12 w-12 object-cover rounded-full shadow-lg" src="{{$review->user->profile_photo_url}}" alt="">
+
                     </figure>
                     <section class="shadow card flex-1">
                         <div class="card-body bg-gray-100">
                              <p><b>{{$review->user->name}}</b><i class="fas fa-star text-yellow-300"></i>({{$review->rating}})</p>   
                              {{$review->comment}}
                         </div>
+
                     </section>
                 </article>
             @endforeach
         </div>
     </section>
+    
 </section>

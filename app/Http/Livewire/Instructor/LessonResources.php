@@ -26,6 +26,7 @@ class LessonResources extends Component{
             'file'=>'required'
         ]);
         $url =$this->file->store('resources');
+        
         $this->lesson->resource()->create([
             'url'=>$url
         ]);

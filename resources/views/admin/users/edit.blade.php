@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Curso Colegios')
+@section('title', 'Asginar Usuario')
 
 @section('content_header')
     <h1>Asginar Usuario</h1>

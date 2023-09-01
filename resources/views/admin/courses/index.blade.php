@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Curso Colegios')
+@section('title', 'Curso Pendinte de Aprobación')
 
 @section('content_header')
     <h1>Curso Pendinte de Aprobación</h1>

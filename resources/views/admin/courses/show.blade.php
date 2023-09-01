@@ -29,7 +29,6 @@
             </span>
           </div>
     </div>
-        
     @endif
     <div class="container grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="order-2 lg:col-span-2 lg:order-1">
@@ -38,9 +37,6 @@
                     <div class="card-body">
                         <h1 class="font-bold text-2x1 md-2">Lo que aprenderás</h1>
                             <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
-
-
-
                                 @forelse ($course->goals as $goal)
                                 <li class="text-gray-700 text-base">
                                     <i class="fas fa-check text-gray-600 mr-2"></i>{{$goal->name}}
@@ -104,7 +100,7 @@
             </section>
             <h1 class="text-xl font-semibold sm:text-2xl mb-4">Descripción</h1>
     
-            <section class="bg-white shadow">
+            <section class="bg-white shadow  my-6">
                 <div class="card-body">
                 <div class="text-gray-700 text-base">
                     {!!$course->description!!}
@@ -124,12 +120,13 @@
                         </div>
                     </div>
                          
-                    <form action="{{route('admin.courses.approved',$course)}}" class="mt-4" method="POST">
+                    <form action="{{route('admin.courses.approved',$course)}}" class="mt-4 " method="POST">
                         @csrf
-                        <button type="submit" class="btn btn-primary w-full">Aprovar curso</button>
+                        <button type="submit" class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
+                        focus:outline-none focus:shadow-outline cursor-pointer">Aprovar curso</button>
     
                     </form>
-                    <a href="{{route('admin.courses.observation',$course)}}"class="btn btn-danger w-full block text-center mt-4" > Observar curso</a>
+                    <a href="{{route('admin.courses.observation',$course)}}"class="btn btn-danger w-full block text-center mt-4 cursor-pointer" > Observar curso</a>
                     
                     </div>
                 </section>

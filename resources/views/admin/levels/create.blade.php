@@ -1,5 +1,5 @@
 @extends('adminlte::page')
-@section('title', 'Curso Colegios')
+@section('title', 'Crear Nuevo Nivel')
 @section('content_header')
     <h1>Crear Nuevo Nivel</h1>
 @stop

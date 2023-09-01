@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Curso Colegios')
+@section('title', 'Detalles de Categoria')
 
 @section('content_header')
     <h1>Detalles de Categoria</h1>

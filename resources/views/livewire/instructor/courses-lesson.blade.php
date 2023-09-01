@@ -28,8 +28,9 @@
                             <span class="text-xs text-red-500">{{$message}}</span>
                         @enderror
                                 <div class="mt-4 flex justify-end">
-                                    <button type="button" class="btn btn-danger" wire:click="cancel">Cancelar</button>
-                                    <button type="submit" class="btn btn-primary ml-2" wire:click="update" >Actualizar</button>
+                                    <button class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 ml-2" wire:click="cancel">Cancelar</button>  
+                                    <button class="focus:outline-none text-white bg-blue-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-red-900 ml-2" wire:click="update" >Actualizar</button>
+                           
                                 </div>
                     </form>
                  @else
@@ -46,23 +47,30 @@
                             <button class="btn btn-danger text-sm" wire:click="destroy({{$item}})"> Eliminar </button>
     
                         </div>
+                      
                         <div class="mb-4">
                             @livewire('instructor.lesson-description', ['lesson' => $item], key('lesson-description'.$item->id))
 
                         </div>
+                        
                         <div>
                             @livewire('instructor.lesson-resources', ['lesson' => $item], key('lesson-resources'.$item->id))
+
                         </div>
+
                     </div>
                 @endif
             </div>
         </article>
+
     @endforeach
+    
     <div x-data="{open: false}" class="mt-4">
         <a x-show="!open" x-on:click="open = true" class="flex items-center cursor-pointer">
             <i class="far fa-plus-square text-2xl text-red-500 mr-2"></i>
             Agregar nueva Lección
         </a>
+
         <article class="card" x-show="open">
                 <div class="card-body bg-gray-100">
                     <h1 class="text-xl font-bold mb-4 text-black">Agregar nueva Lección</h1>
@@ -93,8 +101,8 @@
                             @enderror
                         </div>
                         <div class="flex justify-end">
-                             <button class="btn btn-danger" x-on:click="open = false">Cancelar</button>   
-                               <button class="btn btn-primary ml-2" wire:click="store"> Agregar</button> 
+                             <button class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 ml-2"x-on:click="open = false">Cancelar</button>   
+                               <button class="focus:outline-none text-white bg-blue-700 hover:bg-red-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-red-900 ml-2" wire:click="store"> Agregar</button> 
                         </div>
                 </div>
         </article>
