@@ -1,7 +1,7 @@
 <x-app-layout>
 
    
-        @livewire('contacto-index')
+    @livewire('contacto-index')
 
 
 </x-app-layout>
