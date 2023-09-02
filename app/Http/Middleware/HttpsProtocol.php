@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use Illuminate\Support\Facades\App;
 class HttpsProtocol
 {
     /**
@@ -15,10 +15,9 @@ class HttpsProtocol
      */
     public function handle(Request $request, Closure $next): Response
     {
-            if (!$request->secure()) {
-                return redirect()->secure($request->getRequestUri());
-                # code...
-            }
+        if (!$request->secure() && App::environment() === 'production'){
+            return redirect()->secure($request->getRequestUri());
+        }
              
 
         return $next($request);
