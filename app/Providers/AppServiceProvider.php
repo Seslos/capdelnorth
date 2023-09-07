@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
         Lesson::observe(LessonObserver::class);
         Section::observe(SectionObserver::class);
         Blade::directive('routeIs', function ($expression) {
-            return "<?php if(Request::url()==route($expression)): ?>";
+            return "<?php if(Request::url() == route($expression)): ?>";
         });
     }
 }
