@@ -39,7 +39,7 @@ class ContactanosMailable extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'Mail.contactanos',
+            view: 'mail.contactanos',
         );
     }
 
