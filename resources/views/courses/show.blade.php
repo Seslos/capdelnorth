@@ -32,10 +32,9 @@
                         </ul>
                 </div>
          </section>
-        <section class="mb-12">
-            <h2 class="text-xl font-semibold sm:text-2xl mb-4">Temario</h2>
-            
-                @foreach ($course->sections as $section)
+         <section class="mb-12">
+            <h2 class="text-xl font-semibold sm:text-2xl mb-4">Temario</h2>         
+                @forelse ($course->sections as $section)
                 <article class="mb-4 shadow"
                 @if ($loop->first)
                     x-data="{open:true}"
@@ -53,11 +52,15 @@
                         </li>
                         @endforeach
                     </ul>
-                </div>
-        
+                </div>       
             </article>
-            @endforeach
-        
+            @empty
+            <article class="card">
+                <div class="card-body">
+                    Este curso no tiene ninguna sección asignada
+                </div>
+            </article>
+            @endforelse        
         </section>
         <h1 class="text-xl font-semibold sm:text-2xl mb-4 text-gray-800">CRITERIOS DE EVALUACIÓN</h1>
         <section class=" bg-white shadow mb-8">
