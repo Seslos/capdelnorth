@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'CapDelNorth') }}</title>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -23,21 +23,26 @@
                 <aside>
                     <h1 class="font-bold text-lg mb-4"> Edición del curso</h1>
                         <ul class="text-sm text-gray-600 mb-4">
-                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.index')border-indigo-400 @else borden-transparent  @endif pl-2">
+                            <li class="leading-7 mb-1 border-l-4 " >
                                 <a href="{{route('instructor.courses.index')}}">Inicio</a>
                             </li>
+
                             <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.edit',$course)border-indigo-400 @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.edit',$course)}}">Información del curso</a>
                             </li>
+
                             <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.curriculum',$course)border-indigo-400 @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.curriculum',$course)}}">Lecciones del curso</a>
                             </li>
+
                             <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.goals',$course)border-indigo-400 @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.goals',$course)}}">Metas del curso</a>
                             </li>
+
                             <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.students',$course)border-indigo-400 @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.students',$course)}}">Estudiantes</a>
                             </li>
+                            
                              @if ($course->observation)
                              <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.observation',$course)border-indigo-400 @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.observation',$course)}}">Obeservaciones</a>
@@ -48,13 +53,13 @@
                                 @case(1)
                         <form action="{{route('instructor.courses.status',$course)}}" method="post">
                             @csrf
-                            <button type="submit" class="bg-red-400 shadow-xl hover:bg-red-600	 text-white font-bold rounded-full p-4 w-48 cursor-pointer"> Solicitar revición</button>
+                            <button type="submit" class="bg-red-400 shadow-xl hover:bg-red-600	 text-white font-bold rounded-full p-4 w-48 cursor-pointer"> Solicitar Revición</button>
                         </form>
                                     @break
                                 @case(2)
                                 <div class="card text-gray-500">
                                     <div class="card-body">
-                                        Este curso se encuentra en revisión
+                                        Este curso se encuentra en Revición
                                     </div>
                                 </div>
                                     @break
