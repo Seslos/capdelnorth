@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contacto;
 use Illuminate\Http\Request;
 use App\Models\Course;
 class HomeController extends Controller

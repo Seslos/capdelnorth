@@ -1,7 +1,7 @@
 <x-app-layout>
 
    
-    @livewire('cliente')
+    @livewire('client')
 
 
 </x-app-layout>

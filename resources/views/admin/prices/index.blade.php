@@ -1,7 +1,6 @@
 @extends('adminlte::page')
 @section('title', 'Lista de Precios')
 @section('content_header')
-<a href="{{route('admin.prices.create')}}" class="btn btn-secondary btn-sm float-right">Agregar Precios</a>
     <h1>Lista de Precios</h1>
 @stop
 @section('content')
@@ -12,6 +11,9 @@
 @endif
     <div class="card">
         <div class="card-body">
+            <a href="{{route('admin.prices.create')}}" class="btn btn-secondary btn-sm ">Agregar Precios</a>
+
+
             <table class="table table-striped">
                 <thead>
                     <tr>

@@ -4,16 +4,21 @@
     <h1>Clientes</h1>
 @stop
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+@if (session('info'))
+<div class="alert alert-success">
+    {{session('info')}}
+</div>
+@endif
     <div class="card">
         <div class="card-body">
+            <a href="{{route('admin.clientes.create')}}" class="btn btn-primary btn-sm">Ingresar Clientes</a>
+
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
                         <th colspan="2">Acciones</th>
-                     
                     </tr>
                 </thead>
                 <tbody>
@@ -27,13 +32,12 @@
                                 {{$cliente->name}}
                             </td>
 
-
                             <td width="5px">
-                                <a class="btn btn-primary btn-sm" href="{{route('admin.levels.edit',$cliente)}}">Editar</a>
+                                <a class="btn btn-primary btn-sm" href="{{route('admin.clientes.edit',$cliente)}}">Editar</a>
                             </td>
 
                             <td width="5px">
-                              <form action="{{route('admin.levels.destroy',$cliente)}}" method="POST">
+                              <form action="{{route('admin.clientes.destroy',$cliente)}}" method="POST">
                                 @method('delete')
                             @csrf
                             <button class="btn btn-danger btn-sm" type="submit">Eliminar</button>

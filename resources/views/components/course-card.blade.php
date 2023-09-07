@@ -1,7 +1,7 @@
 
 
 @props(['course'])
-<article class="cardd flex flex-col my-2">
+<article class="cardd flex flex-col">
   
    <img class="h-36 w-full object-cover" src="data:image/png;base64,{{ $course->image->url }}" alt="">
 

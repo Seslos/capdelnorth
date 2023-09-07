@@ -4,7 +4,6 @@
 
 @section('content_header')
 
-<a href="{{route('admin.categories.create')}}" class="btn btn-secondary btn-sm float-right">Nueva Categoria</a>
 <h1>Lista de Categorias</h1>
 @stop
 
@@ -18,6 +17,8 @@
 @endif
     <div class="card">
         <div class="card-body">
+            <a href="{{route('admin.categories.create')}}" class="btn btn-secondary btn-sm ">Nueva Categoria</a>
+
             <table class="table table-striped">
                 <thead>
                     <tr>

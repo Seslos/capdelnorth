@@ -1,5 +1,5 @@
 <section>
-<h1 class="text-2xl font-bold"> METAS DEL CURSO</h1>
+<h1 class="text-2xl font-bold"> CONTENIDOS DEL CURSO</h1>
 <hr class="mt-2 mb-6">
 @foreach ($course->goals as $item)
     <article class="card mb-4">
@@ -31,7 +31,8 @@
                <span class="text-xs text-red-500">{{$message}}</span> 
                @enderror
                 <div class="flex justify-end mt-2">
-                    <button type="submit" class="btn btn-primary">Agregar Meta</button>
+                    <button type="submit" class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg 
+                    focus:outline-none focus:shadow-outline cursor-pointer">Agregar Meta</button>
                 </div>
             </form>
         </div>

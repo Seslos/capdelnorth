@@ -31,7 +31,8 @@
                <span class="text-xs text-red-500">{{$message}}</span>
                @enderror
                 <div class="flex justify-end mt-2">
-                    <button type="submit" class="btn btn-primary">Agregar Audiencia</button>
+                    <button type="submit" class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg 
+                    focus:outline-none focus:shadow-outline cursor-pointer">Agregar Audiencia</button>
                 </div>
             </form>
         </div>

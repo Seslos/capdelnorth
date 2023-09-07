@@ -1,7 +1,6 @@
 @extends('adminlte::page')
 @section('title', 'Lista de Niveles')
 @section('content_header')
-<a href="{{route('admin.levels.create')}}" class="btn btn-secondary btn-sm float-right">Crear Nivel</a>
     <h1>Lista de Niveles</h1>
 @stop
 @section('content')
@@ -12,6 +11,8 @@
 @endif
     <div class="card">
         <div class="card-body">
+            <a href="{{route('admin.levels.create')}}" class="btn btn-secondary btn-sm ">Crear Nivel</a>
+
             <table class="table table-striped">
                 <thead>
                     <tr>

@@ -8,8 +8,6 @@ use App\Models\Lesson;
 use App\Models\Section;
 use App\Observers\LessonObserver;
 use App\Observers\SectionObserver;
-use Illuminate\Support\Facades\URL;
-
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -24,11 +22,8 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
-    { 
-         URL::forceScheme('https');
-         if ($this->app->environment('production')) {
-          
-    }
+    {
+
         Lesson::observe(LessonObserver::class);
         Section::observe(SectionObserver::class);
         Blade::directive('routeIs', function ($expression) {

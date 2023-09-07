@@ -4,8 +4,15 @@
     <h1>Galeria</h1>
 @stop
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+@if (session('info'))
+<div class="alert alert-primary" role="alert">
+    <strong>¡Éxito!</strong> {{session('info')}}
+</div>   
+@endif
     <div class="card">
+        <div class="card-header">
+            <a href="{{route('admin.galeria.create')}}">Subir Imagenes</a>
+        </div>
         <div class="card-body">
             <table class="table table-striped">
                 <thead>

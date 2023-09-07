@@ -359,7 +359,7 @@ return [
         [
             'text' => 'Precios',
             'route'  => 'admin.prices.index',
-            'icon' => 'fas fa-fw fa-cc-visa',
+            'icon' => 'fas fa-dollar-sign',
         ],
  
         ['header' => 'OPCIONES EXTRAS'],
@@ -367,13 +367,13 @@ return [
         [
             'text' => 'Galeria',
             'route'  => 'admin.galeria.index',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-camera-retro',
         ],
 
         [
             'text' => 'Contacto',
-            'route'  => 'admin.Contacto.index',
-            'icon' => 'fas fa-fw fa-user',
+            'route'  => 'admin.contacto.index',
+            'icon' => 'fas fa-address-book',
         ],
         
         [

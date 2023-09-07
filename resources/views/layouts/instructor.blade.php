@@ -23,6 +23,9 @@
                 <aside>
                     <h1 class="font-bold text-lg mb-4"> Edición del curso</h1>
                         <ul class="text-sm text-gray-600 mb-4">
+                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.index')border-indigo-400 @else borden-transparent  @endif pl-2">
+                                <a href="{{route('instructor.courses.index')}}">Inicio</a>
+                            </li>
                             <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.edit',$course)border-indigo-400 @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.edit',$course)}}">Información del curso</a>
                             </li>
@@ -42,50 +45,40 @@
                              @endif
                         </ul>
                             @switch($course->status)
-                                @case(1)        
+                                @case(1)
                         <form action="{{route('instructor.courses.status',$course)}}" method="post">
                             @csrf
-                            <button type="submit" class="btn btn-danger"> Solicitar revición</button>
+                            <button type="submit" class="bg-red-400 shadow-xl hover:bg-red-600	 text-white font-bold rounded-full p-4 w-48 cursor-pointer"> Solicitar revición</button>
                         </form>
                                     @break
                                 @case(2)
                                 <div class="card text-gray-500">
                                     <div class="card-body">
-                                        este curso se encuentra en revisión
+                                        Este curso se encuentra en revisión
                                     </div>
-
                                 </div>
-                               
                                     @break
                                     @case(3)
                                     <div class="card text-gray-500">
                                         <div class="card-body">
-                                            este curso se encuentra publicado
+                                            Este curso se encuentra publicado
                                         </div>
-    
                                     </div>
-                             
                                     @break
                                 @default
-                                    
                             @endswitch
-
                 </aside>
                     <div class="col-span-4 card">
                         <div class="card-body text-gray-600">
                     {{$slot}}
-        
                         </div>
                     </div>
-        
             </div>
         </main>
         @stack('modals')
         @livewireScripts
-
         @isset($js)
         {{$js}}
         @endisset
-       
     </body>
 </html>

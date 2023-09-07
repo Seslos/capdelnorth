@@ -64,8 +64,6 @@ class LevelController extends Controller
         ]);
         $level->update($request->all());
         return redirect()->route('admin.levels.edit',$level)->with('info','Nivel Actualizadó con éxito');
-
-
     }
 
     /**

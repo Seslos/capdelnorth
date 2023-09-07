@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\ContactanosMailable;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CourseController;
@@ -38,3 +39,4 @@ route::get('Cliente',[CapController::class,'cliente'])->name('cap.cliente');
 route::post('courses/{course}/enrolled',[CourseController::class,'enrolled'])->middleware('auth')->name('courses.enrolled');
 Route::get('course-status/{course}',CourseStatus::class)->middleware('auth')->name('courses.status');
      
+Route::post('contactanos',[ContactoIndex::class,'store'])->name('contactanos.store');

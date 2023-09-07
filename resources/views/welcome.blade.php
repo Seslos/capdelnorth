@@ -33,7 +33,6 @@
                 <h1 class="text-center text-xl text-gray-700">Certicaciones
                 </h1>
             </header>
-
     </article>
 
     <article>
@@ -45,9 +44,11 @@
             </header>
         <!-- <p class="text-sm text-gray-500">Necesitas ayuda para aprender algún tema. Escríbenos</p>
         -->
-        </article>   
-    </div>
-    </div>
+    </article>   
+
+
+</div>
+</div>
 </section>
 <section class="mt-24"></section>
 <section class="mt-24 bg-gray-700 py-12">
