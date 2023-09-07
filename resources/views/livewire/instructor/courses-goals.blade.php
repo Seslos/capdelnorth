@@ -26,13 +26,13 @@
     <article class="card">
         <div class="card-body bg-gray-100" >
             <form wire:submit.prevent="store">
-                <input wire:model="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="Agregar Nombre de la Meta">
+                <input wire:model="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="Agregar Contenido">
                @error('name')
                <span class="text-xs text-red-500">{{$message}}</span> 
                @enderror
                 <div class="flex justify-end mt-2">
                     <button type="submit" class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg 
-                    focus:outline-none focus:shadow-outline cursor-pointer">Agregar Meta</button>
+                    focus:outline-none focus:shadow-outline cursor-pointer">Agregar </button>
                 </div>
             </form>
         </div>
