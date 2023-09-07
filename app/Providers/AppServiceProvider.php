@@ -24,9 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
- if(config('app.debug')!=true) {
-    \URL::forceScheme('https');
-  }
+        \URL::forceScheme('https');
         Lesson::observe(LessonObserver::class);
         Section::observe(SectionObserver::class);
         Blade::directive('routeIs', function ($expression) {
