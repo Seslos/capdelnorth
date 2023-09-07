@@ -23,10 +23,7 @@
                 <aside>
                     <h1 class="font-bold text-lg mb-4"> Edición del curso</h1>
                         <ul class="text-sm text-gray-600 mb-4">
-                            <li class="leading-7 mb-1 border-l-4  pl-2" >
-                                <a href="{{route('instructor.courses.index')}}">Inicio</a>
-                            </li>
-
+                    
                             <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.edit',$course) border-indigo-400 @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.edit',$course)}}">Información del curso</a>
                             </li>
@@ -44,7 +41,7 @@
                             </li>
                             
                              @if ($course->observation)
-                             <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.observation',$course) border-indigo-400 @else borden-transparent  @endif pl-2">
+                             <li class="leading-7 mb-1 border-l-4  pl-2">
                                 <a href="{{route('instructor.courses.observation',$course)}}">Obeservaciones</a>
                             </li>
                              @endif
