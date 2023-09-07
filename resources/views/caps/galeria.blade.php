@@ -1,7 +1,3 @@
 <x-app-layout>
-
-   
-    @livewire('galery')
-
-
+@livewire('galeria')
 </x-app-layout>
