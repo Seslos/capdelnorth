@@ -24,9 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-    if (app()->environment('remote') || env('FORCE_HTTPS',false)) {
-            URL::forceScheme('https');
-        }
+    if (env('APP_ENV') === 'production') {
+        \Illuminate\Support\Facades\URL::forceScheme('https');
+    }
         Lesson::observe(LessonObserver::class);
         Section::observe(SectionObserver::class);
         Blade::directive('routeIs', function ($expression) {
