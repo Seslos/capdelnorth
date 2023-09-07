@@ -12,6 +12,7 @@ use Illuminate\Queue\SerializesModels;
 class ContactanosMailable extends Mailable
 {
     use Queueable, SerializesModels;
+
     public $contacto;
     /**
      * Create a new message instance.
@@ -32,14 +33,13 @@ class ContactanosMailable extends Mailable
         );
     }
 
-
     /**
      * Get the message content definition.
      */
     public function content(): Content
     {
         return new Content(
-            view: 'mail.contactanos',
+            view: 'Mail.contactanos',
         );
     }
 
