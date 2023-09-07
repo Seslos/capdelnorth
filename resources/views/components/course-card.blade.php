@@ -7,7 +7,6 @@
 
    <div class="card-body flex-1 flex flex-col">
     <h1 class="card-title">{{Str::limit($course->title,40)}}</h1>
-    <p class="text-gray-500 text-sm mb-2 mt-auto ">Prof:{{$course->teacher->name}}</p>
 
         <div class="flex">
         
