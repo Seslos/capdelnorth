@@ -111,6 +111,10 @@ class CourseController extends Controller{
     /**
      * Remove the specified resource from storage.
      */
+    public function deleteId($id)
+{
+$this->deleteId = $id;
+}
     public function destroy(Course $course)
     {
         $course->delete();

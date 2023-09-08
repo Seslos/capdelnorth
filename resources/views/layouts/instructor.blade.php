@@ -87,5 +87,12 @@
         {{$js}}
         @endisset
         
+      <script>
+        window.addEventListener('openDeleteModal',event->{
+            $("$modalForm").modal('show');
+        })
+      </script>
+
+
     </body>
 </html>
