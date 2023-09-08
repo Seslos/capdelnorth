@@ -105,7 +105,7 @@ class CourseController extends Controller{
                 ]);     
                 }
         }
-        return redirect()->route('instructor.courses.edit',$course);
+        return redirect()->route('instructor.courses.edit',$course)->with('info','El Curso  se Actualizo con éxito');
     }
  
     /**
@@ -113,7 +113,9 @@ class CourseController extends Controller{
      */
     public function destroy(Course $course)
     {
-        //
+        $course->delete();
+        $course->image->delete();
+        return redirect()->route('instructor.courses.index')->with('info','El Curso  se Elimino con éxito');
     }
     public function goals(Course $course){
         $this->authorize('dicatated',$course);
