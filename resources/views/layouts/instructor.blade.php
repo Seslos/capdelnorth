@@ -53,7 +53,9 @@
                                 @case(1)
                         <form action="{{route('instructor.courses.status',$course)}}" method="post">
                             @csrf
-                            <button type="submit" class="bg-red-400 shadow-xl hover:bg-red-600	 text-white font-bold rounded-full p-4 w-48 cursor-pointer"> Solicitar Revición</button>
+                            <button type="submit" 
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded my-3 cursor-pointer"
+                       > Solicitar Revición</button>
                         </form>
                                     @break
                                 @case(2)
@@ -64,11 +66,16 @@
                                 </div>
                                     @break
                                     @case(3)
+                                    <form action="{{route('instructor.courses.status2',$course)}}" method="post">
+                                        @csrf
+                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded my-3"> Póner en Borrador</button>
+                                    </form>
                                     <div class="card text-gray-500">
                                         <div class="card-body">
                                             Este curso se encuentra publicado
                                         </div>
                                     </div>
+                                    
                                     @break
                                 @default
                             @endswitch

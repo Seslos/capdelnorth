@@ -138,6 +138,19 @@ $this->deleteId = $id;
     }
 
 
+
+    public function status2(Course $course){
+        $course->status=1;
+        $course->save();
+    
+            if ($course->observation) {
+                $course->observation->delete();
+            }
+        return redirect()->route('instructor.courses.edit',compact('course'));
+
+    }
+
+
     public function observation(Course $course)
     {
 return view('instructor.courses.observation',compact('course'));
