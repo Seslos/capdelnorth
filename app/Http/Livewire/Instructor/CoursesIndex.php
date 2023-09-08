@@ -10,32 +10,25 @@ class CoursesIndex extends Component{
     public $selectedItem;
     public $search;
 
-    public function selectItem($itemId, $action)
+    public function deleteStudent(int $student_id)
     {
-        $this->selectedItem = $itemId;
-        
-        if ($action == 'delete') {
-            // This will show the modal on the frontend
-            $this->dispatchBrowserEvent('openDeleteModal');
-        } elseif ($action == 'showPhotos') {
-            // Pass the currently selected item
-            $this->emit('getPostId', $this->selectedItem);
-
-            // Show the modal that shows the additional photos
-            $this->dispatchBrowserEvent('openModalShowPhotos');
-        }
-        else {
-            $this->emit('getModelId', $this->selectedItem);
-            $this->dispatchBrowserEvent('openModal');
-        }
+        $this->student_id = $student_id;
     }
 
-    public function delete(Course $course)
+    public function destroyStudent(Course $course)
     {
         $course->delete();
         $course->image->delete();
-        $this->dispatchBrowserEvent('closeDeleteModal');
+        session()->flash('message','Student Deleted Successfully');
+        $this->dispatchBrowserEvent('close-modal');
     }
+
+    public function closeModal()
+    {
+        $this->resetInput();
+    }
+
+
 
     
     public function render(){
