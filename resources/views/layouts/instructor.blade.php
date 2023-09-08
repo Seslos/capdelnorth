@@ -23,7 +23,7 @@
                 <aside>
                     <h1 class="font-bold text-lg mb-4"> Edición del curso</h1>
                         <ul class="text-sm text-gray-600 mb-4">
-                            <li class="leading-7 mb-1 border-l-4   @routeIs('instructor.courses.index',$course) border-indigo-400 @else borden-transparent  @endif pl-2">
+                            <li class="leading-7 mb-1 border-l-4 pl-2">
                                 <a href="{{route('instructor.courses.index')}}">Inicio</a>
                             </li>
 
@@ -54,8 +54,7 @@
                         <form action="{{route('instructor.courses.status',$course)}}" method="post">
                             @csrf
                             <button type="submit" 
-                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded my-3 cursor-pointer"
-                       > Solicitar Revición</button>
+                            class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded my-3 cursor-pointer"> Solicitar Revición</button>
                         </form>
                                     @break
                                 @case(2)
@@ -88,18 +87,10 @@
             </div>
         </main>
         @stack('modals')
-
         @livewireScripts
         @isset($js)
         {{$js}}
         @endisset
         
-      <script>
-        window.addEventListener('openDeleteModal',event->{
-            $("$modalForm").modal('show');
-        })
-      </script>
-
-
     </body>
 </html>
