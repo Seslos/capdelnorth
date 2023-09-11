@@ -13,7 +13,7 @@
   @csrf
     <div class="mb-3">
       <label for="inputPassword">Imagenes</label>
-      <input type="file" name="image[]" id="image" multiple class="form-control">
+      <input type="file" name="image" id="image" multiple class="form-control">
     </div>
  
     <button class="btn btn-info w-100" type="submit" id="btnEnviar">

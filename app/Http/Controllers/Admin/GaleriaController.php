@@ -15,7 +15,10 @@ class GaleriaController extends Controller{
         return view('admin.galeria.create');
     }  
     public function store(Request $request){
+        $request->validate([
 
+            'file'=>'image'
+        ]);
         if($request->hasfile('image'))
          {
             $url =base64_encode(file_get_contents($request->file('image')->path()));
