@@ -27,20 +27,20 @@
                                 <a href="{{route('instructor.courses.index')}}">Inicio</a>
                             </li>
 
-                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.edit',$course) border-indigo-400 @else borden-transparent  @endif pl-2">
-                                <a href="{{route('instructor.courses.edit',$course)}}">Información del curso</a>
+                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.edit', $course) border-indigo-400 @else borden-transparent  @endif pl-2">
+                                <a href="{{route('instructor.courses.edit', $course)}}">Información del curso</a>
                             </li>
 
-                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.curriculum',$course) border-indigo-400 @else borden-transparent  @endif pl-2">
-                                <a href="{{route('instructor.courses.curriculum',$course)}}">Lecciones del curso</a>
+                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.curriculum', $course) border-indigo-400 @else borden-transparent  @endif pl-2">
+                                <a href="{{route('instructor.courses.curriculum', $course)}}">Lecciones del curso</a>
                             </li>
 
-                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.goals',$course) border-indigo-400 @else borden-transparent  @endif pl-2">
-                                <a href="{{route('instructor.courses.goals',$course)}}">Metas del curso</a>
+                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.goals', $course) border-indigo-400 @else borden-transparent  @endif pl-2">
+                                <a href="{{route('instructor.courses.goals', $course)}}">Metas del curso</a>
                             </li>
 
-                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.students',$course) border-indigo-400 @else borden-transparent  @endif pl-2">
-                                <a href="{{route('instructor.courses.students',$course)}}">Estudiantes</a>
+                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.students', $course) border-indigo-400 @else borden-transparent  @endif pl-2">
+                                <a href="{{route('instructor.courses.students', $course)}}">Estudiantes</a>
                             </li>
                             
                              @if ($course->observation)
