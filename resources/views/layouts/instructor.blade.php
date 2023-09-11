@@ -27,11 +27,11 @@
                                 <a href="{{route('instructor.courses.index')}}">Inicio</a>
                             </li>
 
-                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.edit', $course) border-indigo-400 @else borden-transparent  @endif pl-2">
+                            <li class="leading-7 mb-1 border-4 @routeIs('instructor.courses.edit', $course) border-indigo-200 border-l-indigo-500  @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.edit', $course)}}">Información del curso</a>
                             </li>
 
-                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.curriculum', $course) border-indigo-400 @else borden-transparent  @endif pl-2">
+                            <li class="leading-7 mb-1 border-4 @routeIs('instructor.courses.curriculum', $course) border-indigo-200 border-l-indigo-500  @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.curriculum', $course)}}">Lecciones del curso</a>
                             </li>
 
