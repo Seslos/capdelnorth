@@ -27,7 +27,6 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
 });
 
 route::get('cursos',[CourseController::class,'index'])->name('courses.index');
- 
 route::get('cursos/{course}',[CourseController::class,'show'])->name('courses.show');
 
 
