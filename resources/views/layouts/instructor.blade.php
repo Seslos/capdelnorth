@@ -19,19 +19,19 @@
         <main class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
             <!-- Page Content -->
-            <div class="container py-8 grid grid-cols-5 gap-6">
+            <div class="container py-8 grid grid-cols-6 gap-6">
                 <aside>
                     <h1 class="font-bold text-lg mb-4"> Edición del curso</h1>
                         <ul class="text-sm text-gray-600 mb-4">
-                            <li class="leading-7 mb-1 border-l-4 pl-2">
+                            <li class="leading-7 mb-1 border-4 @routeIs('instructor.courses.index', $course) border-l-indigo-500  @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.index')}}">Inicio</a>
                             </li>
 
-                            <li class="leading-7 mb-1 border-4 @routeIs('instructor.courses.edit', $course) border-indigo-200 border-l-indigo-500  @else borden-transparent  @endif pl-2">
+                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.edit', $course)  border-l-indigo-500  @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.edit', $course)}}">Información del curso</a>
                             </li>
 
-                            <li class="leading-7 mb-1 border-4 @routeIs('instructor.courses.curriculum', $course) border-indigo-200 border-l-indigo-500  @else borden-transparent  @endif pl-2">
+                            <li class="leading-7 mb-1 border-l-4 @routeIs('instructor.courses.curriculum', $course)  border-l-indigo-500  @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.curriculum', $course)}}">Lecciones del curso</a>
                             </li>
 
@@ -67,7 +67,7 @@
                                     @case(3)
                                     <form action="{{route('instructor.courses.status2',$course)}}" method="post">
                                         @csrf
-                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded my-3"> Póner en Borrador</button>
+                                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded my-3"> Volver a Borrador</button>
                                     </form>
                                     <div class="card text-gray-500">
                                         <div class="card-body">
