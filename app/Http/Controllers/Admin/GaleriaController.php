@@ -16,21 +16,16 @@ class GaleriaController extends Controller{
     }  
     public function store(Request $request){
 
-
-        $files = [];
         if($request->hasfile('image'))
          {
-            foreach($request->file('image') as $file)
-            {
-                $name = time().rand(1,50).'.'.$file->extension();
-                $file->base64_encode(file_get_contents($request->file('image')->path()));
-                $files[] = $name;  
-            }
+            $url =base64_encode(file_get_contents($request->file('image')->path()));
+
+            Galeria::create([
+                'url'=>$url
+            ]);
          }
   
-         $file= new Galeria();
-         $file->url = $files;
-         $file->save();
+
 
     return redirect()->back()->with('success', 'Imágenes Guardada correctamente');
 
