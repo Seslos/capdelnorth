@@ -24,11 +24,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        \URL::forceScheme('https');
-        Lesson::observe(LessonObserver::class);
-        Section::observe(SectionObserver::class);
         Blade::directive('routeIs', function ($expression) {
             return "<?php if(Request::url() == route($expression)): ?>";
         });
+        \URL::forceScheme('https');
+        Lesson::observe(LessonObserver::class);
+        Section::observe(SectionObserver::class);
+  
     }
 }

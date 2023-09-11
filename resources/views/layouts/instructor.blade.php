@@ -27,7 +27,7 @@
                                 <a href="{{route('instructor.courses.index')}}">Inicio</a>
                             </li>
 
-                            <li class="leading-7 mb-1 border-4 @routeIs('instructor.courses.edit', $course) borden-transparent   @else border-indigo-200 border-l-indigo-500  @endif pl-2">
+                            <li class="leading-7 mb-1 border-4 @routeIs('instructor.courses.edit', $course) border-indigo-200 border-l-indigo-500  @else borden-transparent  @endif pl-2">
                                 <a href="{{route('instructor.courses.edit', $course)}}">Información del curso</a>
                             </li>
 
