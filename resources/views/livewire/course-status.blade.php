@@ -1,9 +1,14 @@
 <div class="mt-8">
         <div class="container grid  grid-cols-1 lg:grid-cols-3 gap-8">
             <div class="col-span-2">
-                <div class="embed-responsive">
-                    {!!$current->iframe!!}
-                </div>
+                <figure>
+                    @if ($course->image)
+                    <img class="h-60 w-full object-cover" src="data:image/png;base64,{{ $course->image->url }}"alt="" >
+                    @else
+                    <img id="picture" class="h-60 w-full object-cover" src="https://images.pexels.com/photos/5940721/pexels-photo-5940721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    @endif
+    
+                </figure>
 
                 <h1 class="text-3xl text-gray-600 font-bold mt-4">
                     {{$current->name}}
