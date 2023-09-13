@@ -7,8 +7,7 @@ class UsersIndex extends Component{
     use WithPagination;
     protected $paginationTheme="bootstrap";
     public $search;
-    public function render()
-    {
+    public function render(){
 
         $users=User::where('name', 'LIKE', '%' .$this->search. '%')
                         ->orwhere('email', 'LIKE', '%' .$this->search. '%')

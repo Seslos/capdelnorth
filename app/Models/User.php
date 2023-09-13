@@ -83,6 +83,9 @@ class User extends Authenticatable
 
 
         //relacion muchos a muchos
+        public function courses(){
+            return $this->belongsToMany('App\Models\Course');
+        }
         public function courses_enrolled(){
             return $this->belongsToMany('App\Models\Course');
         }

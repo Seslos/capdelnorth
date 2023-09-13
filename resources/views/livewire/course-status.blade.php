@@ -9,7 +9,6 @@
                     @endif
     
                 </figure>
-
                 <h1 class="text-3xl text-gray-600 font-bold mt-4">
                     {{$current->name}}
                 </h1>

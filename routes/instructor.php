@@ -1,7 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Instructor\CourseController;
-
 use App\Http\Livewire\Instructor\CoursesCurriculum;
 use App\Http\Livewire\Instructor\CoursesStudents;
 

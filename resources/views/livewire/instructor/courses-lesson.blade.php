@@ -94,7 +94,9 @@
                                 </div>
                             <div class="flex items-center mt-4">
                                 <label class="w-32">URL:</label>
-                                <input wire:model="url" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50">
+                               <!-- <input wire:model="url" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"> -->
+                               <input wire:model="url" type="file" name="url" class="block w-full mb-5 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" >
+
                             </div>
                             @error('url')
                                 <span class="text-xs text-red-500">{{$message}}</span>

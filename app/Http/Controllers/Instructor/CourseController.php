@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\Instructor;
-
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -16,7 +14,6 @@ class CourseController extends Controller{
         $this->middleware('can:Crear cursos')->only('create','store');
         $this->middleware('can:Actualizar cursos')->only('edit','update','goals');
         $this->middleware('can:Eliminar cursos')->only('destroy');
-
     }
     public function index(){
         return view('instructor.courses.index');
@@ -27,7 +24,6 @@ class CourseController extends Controller{
         $prices= Price::pluck('name','id');
         return view('instructor.courses.create',compact('categories','levels','prices'));
     }
-
     public function store(Request $request){
         $request->validate([
             'title'=>'required',
@@ -47,29 +43,15 @@ class CourseController extends Controller{
             $course->image()->create([
                 'url'=>$url
             ]);
-            # code...
         }    
         return redirect()->route('instructor.courses.edit',$course); 
-
-
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Course $course)
-    {
+    public function show(Course $course){
         return view('instructor.courses.show',compact('course'));
 
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Course $course)
-    {
+    public function edit(Course $course){
         $this->authorize('dicatated',$course);
-
         $categories= Category::pluck('name','id');
         $levels= Level::pluck('name','id');
         $prices= Price::pluck('name','id');

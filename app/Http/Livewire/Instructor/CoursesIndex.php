@@ -10,29 +10,21 @@ class CoursesIndex extends Component{
     public $selectedItem;
     public $search;
 
-    public function deleteStudent(int $student_id)
-    {
+    public function deleteStudent(int $student_id){
         $this->student_id = $student_id;
     }
 
-    public function destroyStudent(Course $course)
-    {
+    public function destroyStudent(Course $course){
         $course->delete();
         $course->image->delete();
         session()->flash('message','Student Deleted Successfully');
         $this->dispatchBrowserEvent('close-modal');
     }
 
-    public function closeModal()
-    {
+    public function closeModal(){
         $this->resetInput();
     }
-
-
-
-    
     public function render(){
-
         $courses =Course::where('title','LIKE','%'.$this->search.'%')
         ->where('user_id',auth()->user()->id)
         ->latest('id')

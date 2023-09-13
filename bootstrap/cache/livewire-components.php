@@ -4,7 +4,6 @@
   'cap-index' => 'App\\Http\\Livewire\\CapIndex',
   'client' => 'App\\Http\\Livewire\\Client',
   'cliente' => 'App\\Http\\Livewire\\Cliente',
-  'contacto-index' => 'App\\Http\\Livewire\\ContactoIndex',
   'course-status' => 'App\\Http\\Livewire\\CourseStatus',
   'courses-index' => 'App\\Http\\Livewire\\CoursesIndex',
   'courses-reviews' => 'App\\Http\\Livewire\\CoursesReviews',
@@ -20,5 +19,6 @@
   'instructor.courses-students' => 'App\\Http\\Livewire\\Instructor\\CoursesStudents',
   'instructor.lesson-description' => 'App\\Http\\Livewire\\Instructor\\LessonDescription',
   'instructor.lesson-resources' => 'App\\Http\\Livewire\\Instructor\\LessonResources',
+  'list-course' => 'App\\Http\\Livewire\\ListCourse',
   'search' => 'App\\Http\\Livewire\\Search',
 );

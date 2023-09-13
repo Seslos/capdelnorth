@@ -80,7 +80,9 @@ public function sections() {
         return $this->belongsTo('App\Models\Price');
         }
             //relacion muchos a muchos inversa
-
+            public function users(){
+                return $this->belongsToMany('App\Models\User');
+                }
     public function students(){
         return $this->belongsToMany('App\Models\User');
         }
