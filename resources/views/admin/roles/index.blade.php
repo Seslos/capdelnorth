@@ -1,11 +1,8 @@
 @extends('adminlte::page')
-
 @section('title', 'Lista de Roles')
-
 @section('content_header')
     <h1>Lista de Roles</h1>
 @stop
-
 @section('content')
 
 @if (session('info'))
@@ -13,7 +10,6 @@
     <strong>¡Éxito!</strong> {{session('info')}}
 </div>   
 @endif
-
 
   <div class="card">
     <div class="card-header">

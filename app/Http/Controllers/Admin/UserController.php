@@ -18,9 +18,9 @@ class UserController extends Controller{
         $roles =Role::all();
         return view('admin.users.edit',compact('user','roles'));
     }
-    public function upgrade(User $user){
+    public function show(User $user){
         $course=Course::all();
-        return view('admin.users.upgrade',compact('user','course'));
+        return view('admin.users.show',compact('user','course'));
     }
     public function update(Request $request,User $user){
         $user->roles()->sync($request->roles);

@@ -17,7 +17,7 @@ use App\Http\Controllers\Admin\CourseAController;
 Route::get('',[HomeController::class,'index'])->middleware('can:Ver dashboard')->name('home');
 Route::resource('roles',RoleController::class)->names('roles');
 Route::resource('CourseA',CourseAController::class)->names('CourseA');
-Route::resource('users',UserController::class)->only(['index','edit','upgrade','update'])->names('users');
+Route::resource('users',UserController::class)->only(['index','edit','show','update'])->names('users');
 Route::resource('categories',CategoryController::class)->names('categories');
 Route::resource('levels',LevelController::class)->names('levels');
 Route::resource('prices',PriceController::class)->names('prices');

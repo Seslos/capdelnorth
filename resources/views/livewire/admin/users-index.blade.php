@@ -11,7 +11,8 @@
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Imail</th>
-                    <th>Acciones</th>
+                    <th>Editar</th>
+                    <th>Asignar Curso</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,10 +22,12 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td width='10px'>
-                            <a class="btn btn-primary mb-1" href="{{route('admin.users.edit', $user)}}">Editar</a>
-                            <a class="btn btn-primary" href="{{route('admin.users.upgrade', $user)}}">Agregar Cursos</a>
+                            <a class="btn btn-primary mb-2" href="{{route('admin.users.edit',$user)}}">Editar</a>
                         </td>
-               
+               <td>
+                <a class="btn btn-primary" href="{{route('admin.users.show',$user)}}">Agregar Cursos</a>
+
+               </td>
                     </tr>
                 @endforeach
             </tbody>

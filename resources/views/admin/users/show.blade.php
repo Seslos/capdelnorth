@@ -8,7 +8,7 @@
     <div class="card-body">
         <h1 class="h5">Nombre</h1>
             <p class="form-control">{{$user->name}}</p>
-                <h1 class="h5">Lista de Roles</h1>
+                <h1 class="h5">Lista de Cursos</h1>
                 {!! Form::model($user, ['route'=>['admin.users.update',$user],'method'=>'put']) !!}
 
                     @foreach ($course as $courses)
@@ -19,9 +19,10 @@
                         </label>
                     </div>
                     @endforeach
-                            {!! Form::submit('Asignar rol', ['class'=>'btn btn-primary mt-2']) !!}
+                            {!! Form::submit('Asignar Curso', ['class'=>'btn btn-primary mt-2']) !!}
                 {!! Form::close() !!}
 
     </div>
   </div>
 
+  @stop
