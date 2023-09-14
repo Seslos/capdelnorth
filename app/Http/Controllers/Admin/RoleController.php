@@ -34,7 +34,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-$permissions= Permission::all();
+        $permissions= Permission::all();
         return view('admin.roles.create',compact('permissions'));
     }
 
@@ -44,15 +44,15 @@ $permissions= Permission::all();
     public function store(Request $request)
     {
 
-$request->validate([
-'name'=>'required',
-'permissions' => 'required'
-]);
+            $request->validate([
+            'name'=>'required',
+            'permissions' => 'required'
+            ]);
 
 
-$role =Role::create([
-'name'=>$request->name
-]);
+            $role =Role::create([
+            'name'=>$request->name
+            ]);
 
 $role->permissions()->attach($request->permissions);
 return redirect()->route('admin.roles.index')->with('info','El rol se creo satisfactoriamente');

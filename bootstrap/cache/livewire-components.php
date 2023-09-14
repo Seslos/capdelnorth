@@ -1,4 +1,5 @@
 <?php return array (
+  'admin.asignar-curso' => 'App\\Http\\Livewire\\Admin\\AsignarCurso',
   'admin.img' => 'App\\Http\\Livewire\\Admin\\Img',
   'admin.users-index' => 'App\\Http\\Livewire\\Admin\\UsersIndex',
   'cap-index' => 'App\\Http\\Livewire\\CapIndex',

@@ -73,8 +73,7 @@
                                         <div class="card-body">
                                             Este curso se encuentra publicado
                                         </div>
-                                    </div>
-                                    
+                                    </div>                                   
                                     @break
                                 @default
                             @endswitch
@@ -91,6 +90,5 @@
         @isset($js)
         {{$js}}
         @endisset
-        
     </body>
 </html>

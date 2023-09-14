@@ -37,7 +37,7 @@
         <div>
         <img src="{{asset('img/home/logo.png')}}" class="mr-5 h-6 lg:h-9" alt="logo" />
           <p class="max-w-xs mt-4 text-sm text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, accusantium.
+            Nuestra OTEC diseña y levanta la normalización y evaluación de competencias laborales actualizadas, cuyo objetivo es educar y evaluar las habilidades, destrezas, conocimientos y comportamientos de cada alumno, buscando la formación de un trabajador competente de excelencia.
           </p>
           <div class="flex mt-8 space-x-6 text-gray-600">
             <a class="hover:opacity-75" href target="_blank" rel="noreferrer">

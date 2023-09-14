@@ -4,7 +4,6 @@ use App\Models\Lesson;
 use App\Models\Platform;
 use App\Models\Section;
 use Livewire\Component;
-use Illuminate\Http\Request;
 class CoursesLesson extends Component{
 public $section , $lesson, $platforms, $name, $platform_id=1, $url;
 protected $rules =[
@@ -20,7 +19,7 @@ public function mount(Section $section){
     public function render(){
         return view('livewire.instructor.courses-lesson');
     }
-    public function store(Request $request) {  
+    public function store() {  
     $rules =[
         'name' => 'required',
         'platform_id' =>'required',
@@ -29,8 +28,6 @@ public function mount(Section $section){
 
     if ($this->platform_id == 2 ) {
         $rules['url'] =['required', 'regex:/\/\/(www\.)?vimeo.com\/(\d+)($|\/)/'];
-    } if ($this->platform_id == 3 ) {
-        $rules =base64_encode(file_get_contents($request->file('url')->path()));
     }
     $this->validate($rules);
         Lesson::create([

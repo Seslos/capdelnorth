@@ -62,7 +62,6 @@
                 </figure>
                 <div>
                     <p class="mb-2"> funca</p>
-                    
                     {!! Form::file('file', ['class'=>'form-input w-full','id'=>'file','accept'=>'image/*']) !!}
                     @error('file')
                     <strong class="text-xs text-red-600">{{$message}}</strong>
