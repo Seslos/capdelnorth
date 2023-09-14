@@ -3,9 +3,7 @@
     <div class="card-header">
         <input wire:keydown='limpiar_page' wire:model="search" class="form-control w-100" placeholder="Escriba un Nombre ..">
     </div>
-
     @if ($users->count())
-    
     <div class="card-body">
         <table class="table table-striped">
             <thead>
@@ -13,7 +11,7 @@
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Imail</th>
-                    <th></th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,17 +21,15 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td width='10px'>
-                            <a class="btn btn-primary" href="{{route('admin.users.edit', $user)}}">Editar</a>
+                            <a class="btn btn-primary mb-1" href="{{route('admin.users.edit', $user)}}">Editar</a>
+                            <a class="btn btn-primary" href="{{route('admin.users.upgrade', $user)}}">Agregar Cursos</a>
                         </td>
+               
                     </tr>
-                    
                 @endforeach
-
             </tbody>
-
         </table>
     </div>
-
     <div class="card-footer">
         {{$users->links()}}
     </div>

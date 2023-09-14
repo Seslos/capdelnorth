@@ -333,14 +333,7 @@ return [
             'can'           => 'Leer usuarios',
             'active'        =>['admin/users*']
         ],
-        [
-            'text'        => 'Asignar Cursos',
-            'route'         => 'admin.AsignarCurso.index',
-            'icon'        => 'fas fa-fw fa-users',
-            'can'           => 'Leer usuarios',
-            'active'        =>['admin/AsignarCurso*']
-
-        ],
+    
         ['header' => 'OPCIONES DE CURSOS'],
 
         [

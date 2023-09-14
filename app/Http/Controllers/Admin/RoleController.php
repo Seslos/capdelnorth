@@ -72,6 +72,7 @@ return redirect()->route('admin.roles.index')->with('info','El rol se creo satis
      */
     public function edit(Role $role)
     {
+        
         $permissions= Permission::all();
         return view('admin.roles.edit',compact('role','permissions'));
 
@@ -86,8 +87,6 @@ return redirect()->route('admin.roles.index')->with('info','El rol se creo satis
             'name'=>'required',
             'permissions' => 'required'
             ]);
-
-
 
             $role->update([
                 'name'=> $request->name

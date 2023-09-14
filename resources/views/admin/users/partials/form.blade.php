@@ -15,11 +15,11 @@
     </small>
     <br>
 @enderror
-    @foreach ($Course as $Courses)
+    @foreach ($course as $Courses)
     <div>
         <label>
             {!! Form::checkbox('course_id[]', $Courses->id,null, ['class'=>'mr-1']) !!}
-            {{$Courses->name}}
+            {{$Courses->title}}
 
         </label>
 

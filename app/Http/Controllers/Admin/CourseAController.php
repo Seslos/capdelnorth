@@ -6,17 +6,15 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Course;
-class AsignarCursosController extends Controller
+
+class CourseAController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
-    public function __construct(){
-        $this->middleware('can:Leer usuarios')->only('index');
-        $this->middleware('can:Editar usuarios')->only('edit','update');
-    }
-    public function index(){
-       // $roles = Role::all();
+    public function index()
+    {
         return view('admin.AsignarCurso.index');
     }
 
@@ -49,26 +47,21 @@ class AsignarCursosController extends Controller
      */
     public function edit(User $user)
     {
-        $Course= Course::all();
-        return view('admin.AsignarCurso.edit',compact('user','Course'));
+        $course=Course::all();
+        return view('admin.AsignarCurso.edit',compact('user','course'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-
-    public function update(Request $request, Course $Course)
+    public function update(Request $request,  Course $Course)
     {
         $request->validate([
             'name'=>'required',
             'permissions' => 'required'
             ]);
-
-
-
             $Course->update([
                 'name'=> $request->name
-
             ]);
             $Course->permissions()->sync($request->permissions);
             return redirect()->route('admin.roles.edit',$Course);
