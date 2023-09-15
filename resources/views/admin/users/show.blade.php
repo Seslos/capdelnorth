@@ -9,12 +9,17 @@
         <h1 class="h5">Nombre</h1>
             <p class="form-control">{{$user->name}}</p>
                 <h1 class="h5">Lista de Cursos</h1>
-                {!! Form::model($user, ['route'=>['admin.users.store',$user],'method'=>'put']) !!}
-                    @foreach ($courses as $course)
+                {!! Form::model($course, ['route'=>['admin.users.store'],'method'=>'post']) !!}
+                @csrf
+
+              
+                    @foreach ($course as $courses)
+                    {!! Form::hidden('course_id',$courses->id) !!}
                     <div> 
                         <label>
-                            {!! Form::checkbox('courses[]', $course->id,null, ['class'=>'mr-1']) !!}
-                            {{$course->title}}
+                            {!! Form::checkbox('course[]', $courses->id,null, ['class'=>'mr-1']) !!}
+                            {{$courses->title}}
+                            
                         </label>
                     </div>
                     @endforeach

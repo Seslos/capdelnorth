@@ -19,14 +19,15 @@ class UserController extends Controller{
         return view('admin.users.edit',compact('user','roles'));
     }
     public function show(User $user){
-        $courses=Course::all();
-        return view('admin.users.show',compact('user','courses'));
+        $course=Course::all();
+        return view('admin.users.show',compact('user','course'));
     }
     public function update(Request $request,User $user){
         $user->roles()->sync($request->roles);
         return redirect()->route('admin.users.edit',$user);
     }
     public function store(Course $course){
+
         $course->students()->attach(auth()->user()->id);
     }
 
