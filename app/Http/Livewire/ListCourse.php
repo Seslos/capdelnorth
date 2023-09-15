@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Livewire;
 use App\Models\Course;
+
 use Livewire\Component;
 class ListCourse extends Component{    
     public function render(Course $Course){

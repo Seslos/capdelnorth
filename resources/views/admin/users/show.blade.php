@@ -9,20 +9,17 @@
         <h1 class="h5">Nombre</h1>
             <p class="form-control">{{$user->name}}</p>
                 <h1 class="h5">Lista de Cursos</h1>
-                {!! Form::model($user, ['route'=>['admin.users.update',$user],'method'=>'put']) !!}
-
-                    @foreach ($course as $courses)
+                {!! Form::model($user, ['route'=>['admin.users.store',$user],'method'=>'put']) !!}
+                    @foreach ($courses as $course)
                     <div> 
                         <label>
-                            {!! Form::checkbox('courses[]', $courses->id,null, ['class'=>'mr-1']) !!}
-                            {{$courses->title}}
+                            {!! Form::checkbox('courses[]', $course->id,null, ['class'=>'mr-1']) !!}
+                            {{$course->title}}
                         </label>
                     </div>
                     @endforeach
                             {!! Form::submit('Asignar Curso', ['class'=>'btn btn-primary mt-2']) !!}
                 {!! Form::close() !!}
-
     </div>
   </div>
-
   @stop
