@@ -31,12 +31,9 @@
                     <div class="flex items-center text-gray-600" wire:click="download">
                         <i  class="fas fa-download text-2xl "></i>
                         <p class="text-sm ml-2 cursor-pointer ">Descargar Recurso</p>
-    
                     </div>
                     @endif
-           
                 </div>
-            
                 <div class="card mt-2">
                     <div class="card-body flex text-gray-500 font-bold">
                         @if ($this->previous)
@@ -48,7 +45,6 @@
                         @endif
                     </div>
                 </div>
-            
             </div>
 
             <div class="card">
@@ -84,7 +80,6 @@
                                                 <span class="inline-block w-4 h-4 bg-yellow-300 rounded-full mr-2 mt-1"></span>
                                             @endif
                                         @else
-
                                             @if ($current->id == $lesson->id)
                                                 <span class="inline-block w-4 h-4 border-2 border-gray-500 rounded-full mr-2 mt-1"></span>
                                             @else

@@ -14,9 +14,10 @@ class ListCourse extends Component{
      //   $User->Course(auth()->user()->id);
        // $course->students()->where(auth()->user()->id);
 
-       $c = Course::with('students')->get();
+    //   $c = Course::with('students')->get();
+       $course =  Course::has('students')->where('user_id',auth()->user()->id)->get();  
     //   $c=Course::find(auth()->user()->id)->students()->count();
-dd($c);
+//dd($course);
         return view('livewire.list-course',compact('course'));
     }
 }
